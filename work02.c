@@ -8,12 +8,12 @@ void increment(int val, int amount){
   int i;
   for(i = 0; i < 4; i++){
     *pval += amount;
-    printf("Byte #%d: %hhx\n", (i + 1), *pval);
+    printf("Byte #%u: %hhx\n", (i + 1), *pval);
     pval++;
   }
 
   printf("Resulting value (hex): %x\n", val);
-  printf("Resulting value (decimal): %d\n", val);
+  printf("Resulting value (decimal): %u\n", val);
 
 }
 
@@ -28,7 +28,7 @@ int main(){
   int i;
   printf("Individual Bytes: \n");
   for(i = 0; i < 4; i++){
-    printf("Byte #%d: %hhx\n", (i + 1), *(px + i));
+    printf("Byte #%u: %hhx\n", (i + 1), *(px + i));
   }
 
   increment(x, 1);
